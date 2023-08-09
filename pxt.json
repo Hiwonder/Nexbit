@@ -1,0 +1,23 @@
+{
+    "name": "nexbit",
+    "version": "0.0.1",
+    "description": "Extension for Hiwonder NexBit",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "RGBSonar": "github:Hiwonder/RGBSonar",
+        "WonderCam": "github:Hiwonder/WonderCam"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "RGBLight.ts",
+        "sendbuffer.asm",
+        "_locales/zh/nexbit-strings.json",
+        "_locales/zh/nexbit-jsdoc-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true
+}
