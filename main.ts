@@ -424,7 +424,7 @@ namespace nexbit {
         control.onEvent(MESSAGE_HEAD_STOP, 0, body);
     }
 
-    //% weight=92 blockId=line_followers blockGap=50 block="Line follower %lineFollowerSensor in %lineColor ?"
+    //% weight=92 blockGap=50 blockId=line_followers blockGap=50 block="Line follower %lineFollowerSensor in %lineColor ?"
     //% inlineInputMode=inline
     export function line_followers(lineFollowerSensor: LineFollowerSensors, lineColor: LineColor): boolean {
         let status = false;
@@ -548,7 +548,7 @@ namespace nexbit {
         return true;
     }
 
-    //% weight=90 blockGap=50 blockId=SETRGB block="Set Mode|%mode LED|%index RGB|%r|%g|%b"
+    //% weight=90 blockId=SETRGB block="Set Mode|%mode LED|%index RGB|%r|%g|%b"
     //% inlineInputMode=inline
     export function SETRGB(mode: RGBMode, index: RGBNum, r: number, g: number, b: number) {
          WireWriteDataArray(Sonar_I2C_ADDR, RGB_MODE, mode);
