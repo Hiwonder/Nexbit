@@ -116,5 +116,12 @@
 	"nexbit.initRGBLightBelt|block":"初始化灯带引脚 %pin",
 	"nexbit.belt_setPixelRGB|block":"设置灯带|%lightoffset|颜色为 %rgb",
 	"nexbit.belt_showLight|block":"显示灯带",
-	"nexbit.belt_clearLight|block":"关闭灯带"
+	"nexbit.belt_clearLight|block":"关闭灯带",
+	"nexbit.RGBMode.rgb|block":"彩灯模式",
+	"nexbit.RGBMode.breathing|block":"呼吸灯模式",
+	"nexbit.RGBNum.left|block":"左边",
+	"nexbit.RGBNum.right|block":"右边",
+	"nexbit.RGBNum.all|block":"全部",
+	"nexbit.SETRGB|block":"设置LED|%mode |%index 颜色|%r|%g|%b",
+	"nexbit.GETDISTANCE|block":"获取超声波测距值(mm)"
 }
