@@ -549,7 +549,7 @@ namespace nexbit {
     }
 
     //% weight=90 blockId=SETRGB block="Set Mode|%mode LED|%index RGB|%r|%g|%b"
-    //% r.min=0 r.max=100 g.min=0 g.max=100 b.min=0 b.max=100
+    //% r.min=0 r.max=255 g.min=0 g.max=255 .min=0 r.max=255
     //% inlineInputMode=inline
     export function SETRGB(mode: RGBMode, index: RGBNum, r: number, g: number, b: number) {
          WireWriteDataArray(Sonar_I2C_ADDR, RGB_MODE, mode);
