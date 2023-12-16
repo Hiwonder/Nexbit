@@ -36,6 +36,7 @@
 	"nexbit.Colors.Red|block":"红色",
 	"nexbit.Colors.Green|block":"绿色",
 	"nexbit.Colors.Blue|block":"蓝色",
+	"nexbit.avoidSensor|block":"避障传感器(接口:EXT1)检测到障碍物？",
 	"nexbit.HandleCmdType.NO_COMMAND|block":"无效的命令",
 	"nexbit.HandleCmdType.KEY_CHANGE|block":"按键状态改变",
 	"nexbit.HandleCmdType.JOYSTICK|block":"摇杆数据",

@@ -419,12 +419,12 @@ namespace nexbit {
      * @param code the ir key button that needs to be pressed
      * @param body code to run when event is raised
      */
-    //% weight=93 blockId=onremote_no_ir block="on remote-control stop send"
+    //% weight=94 blockId=onremote_no_ir block="on remote-control stop send"
     export function onremote_no_ir(body: Action) {
         control.onEvent(MESSAGE_HEAD_STOP, 0, body);
     }
 
-    //% weight=92 blockGap=50 blockId=line_followers blockGap=50 block="Line follower %lineFollowerSensor in %lineColor ?"
+    //% weight=93 blockGap=50 blockId=line_followers blockGap=50 block="Line follower %lineFollowerSensor in %lineColor ?"
     //% inlineInputMode=inline
     export function line_followers(lineFollowerSensor: LineFollowerSensors, lineColor: LineColor): boolean {
         let status = false;
@@ -548,7 +548,7 @@ namespace nexbit {
         return true;
     }
 
-    //% weight=90 blockId=SETRGB block="Set Mode|%mode LED|%index RGB|%r|%g|%b"
+    //% weight=92 blockId=SETRGB block="Set Mode|%mode LED|%index RGB|%r|%g|%b"
     //% r.min=0 r.max=255 g.min=0 g.max=255 b.min=0 b.max=255
     //% inlineInputMode=inline
     export function SETRGB(mode: RGBMode, index: RGBNum, r: number, g: number, b: number) {
@@ -601,12 +601,28 @@ namespace nexbit {
         }      
     }
 
-    //% weight=89 blockId=GETDISTANCE block="Get Distance"
+    //% weight=91 blockId=GETDISTANCE block="Get Distance"
     export function GETDISTANCE():number {
         let distance = i2cread(Sonar_I2C_ADDR, 0) + i2cread(Sonar_I2C_ADDR, 1) * 256;
         if (distance > 65500)
             distance = 0
         return distance;
+    }
+
+    /**
+    * Get the obstacle avoidance sensor status,true detect obstacle,false no detect obstacle
+    */
+    //% weight=90 blockId=avoidSensor block="Obstacle avoidance sensor (port:EXT1) detect obstacle ?"
+    export function avoidSensor(): boolean {
+        let status = 0;
+        let flag = false;
+        pins.setPull(DigitalPin.P16, PinPullMode.PullUp);
+        status = pins.digitalReadPin(DigitalPin.P16);
+        if (status == 1)
+            flag = false;
+        else
+            flag = true;
+        return flag;
     }
 
     /**
